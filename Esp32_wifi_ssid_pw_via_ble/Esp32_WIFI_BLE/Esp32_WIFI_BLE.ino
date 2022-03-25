@@ -2,9 +2,6 @@
 #define EEPROM_SIZE 128
 
 #include <WiFi.h>
-#include <ESP32Ping.h>
-const char* remote_host = "www.google.com";
-
 #include <BLEDevice.h>
 #include <BLEServer.h>
 #include <BLEUtils.h>
@@ -147,17 +144,7 @@ void wifiTask() {
       Serial.println();
       Serial.print("Connected with IP: ");
       Serial.println(WiFi.localIP());
-      
-
-      Serial.print("Ping Host: ");
-      Serial.println(remote_host);
-
-      if(Ping.ping(remote_host)){
-        Serial.println("Success!!");
-      }else{
-        Serial.println("ERROR!!");
-      }
-      
+            
     }
   }
 }
